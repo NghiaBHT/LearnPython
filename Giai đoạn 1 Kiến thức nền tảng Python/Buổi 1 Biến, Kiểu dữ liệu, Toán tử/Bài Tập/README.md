@@ -1,0 +1,3 @@
+# Bài 1: Khai báo 5 biến với 5 kiểu dữ liệu khác nhau và in ra từng giá trị kèm kiểu (type()).
+# Bài 2: Thực hiện phép tính cộng, trừ, nhân, chia giữa hai biến số (chọn giá trị bất kỳ) và in kết quả.
+# Bài 3: Viết chương trình nhập từ bàn phím một số nguyên và kiểm tra xem nó là chẵn hay lẻ, rồi in ra kết quả.
