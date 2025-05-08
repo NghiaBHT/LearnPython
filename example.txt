@@ -1,0 +1,2 @@
+Xin chào Python!
+Buoi 6: File I/O va Exception Handling.
