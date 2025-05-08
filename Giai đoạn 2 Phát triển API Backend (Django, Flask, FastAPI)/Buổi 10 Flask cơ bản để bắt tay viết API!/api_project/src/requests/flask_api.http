@@ -1,0 +1,16 @@
+### GET all books
+GET http://localhost:5000/books
+Accept: application/json
+
+### GET book by ID
+GET http://localhost:5000/books/1
+Accept: application/json
+
+### Create a new book
+POST http://localhost:5000/books
+Content-Type: application/json
+
+{
+  "title": "Python Crash Course",
+  "author": "Eric Matthes"
+}
