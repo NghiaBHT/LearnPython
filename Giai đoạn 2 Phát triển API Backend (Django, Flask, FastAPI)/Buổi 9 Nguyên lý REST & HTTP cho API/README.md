@@ -16,7 +16,7 @@
     python3 -m venv .venv
     source .venv/bin/activate
     ```
-    | Khi active, bạn sẽ thấy (.venv) ở đầu dòng.
+    | Khi active, bạn sẽ thấy (`.venv`) ở đầu dòng.
 - Bước 3: Tạo file requirements.txt
     ```
     echo "# dependencies" > requirements.txt
@@ -35,7 +35,7 @@
         - REST Client (làm file .http)
         - EditorConfig (nếu thích)
 - Bước 5: Chọn Python Interpreter
-    - Ctrl+Shift+P → “Python: Select Interpreter” → chọn ./.venv.
+    - Ctrl+Shift+P → “Python: Select Interpreter” → chọn `./.venv`.
 
 # 2. Cấu trúc thư mục gợi ý
 ```
@@ -53,7 +53,7 @@
     └── README.md
 ```
 
-- .vscode/settings.json (ví dụ):
+- `.vscode/settings.json` (ví dụ):
 ```
     {
       "python.pythonPath": ".venv/bin/python",
@@ -62,6 +62,6 @@
     }
 ```
 
-- src/http_examples.py: đặt các ví dụ minh họa gọi HTTP.
-- requests/books.http: dùng REST Client để lưu các request GET/POST.
+- `src/http_examples.py`: đặt các ví dụ minh họa gọi HTTP.
+- `requests/books.http`: dùng REST Client để lưu các request `GET/POST`.
 
