@@ -5,7 +5,44 @@ pip install sqlalchemy psycopg2-binary alembic
 ```
 - Nếu dùng SQLite: `pip install sqlalchemy` là đủ.
 
-## 2. Cấu trúc thư mục khuyến nghị
+## 2. Sử dụng Alembic để migration cho SQLAlchemy
+### ✅ Alembic
+Là công cụ migration chính thức cho SQLAlchemy.
+
+Giúp bạn quản lý version database, thêm/sửa/xóa bảng/column mà không mất dữ liệu.
+
+### 📦 Cài đặt Alembic
+```
+pip install alembic
+```
+### 🚀 Cách dùng Alembic (với FastAPI + SQLAlchemy)
+1. Khởi tạo Alembic:
+    ```
+    alembic init alembic
+    ```
+    => Tạo folder `alembic`/ và file `alembic.ini`.
+2. Cấu hình kết nối DB trong `alembic.ini`:
+    ```ini
+    sqlalchemy.url = sqlite:///./test.db
+    # hoặc postgresql://user:password@localhost/dbname
+    ```
+3. Sửa env.py để import Base
+    Mở `alembic/env.py`:
+    ```Python
+    from app.db.database import Base  # nơi bạn định nghĩa Base
+    from app.db import models         # import model để Alembic "nhìn thấy"
+    target_metadata = Base.metadata
+    ```
+4. Tạo migration mới:
+    ```bash
+    alembic revision --autogenerate -m "create users table"
+    ```
+5. Apply migration (migrate):
+    ```
+    alembic upgrade head
+    ```
+
+## 3. Cấu trúc thư mục khuyến nghị
 ```
 app/
 ├── db/
