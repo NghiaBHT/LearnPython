@@ -122,3 +122,13 @@ app = FastAPI()
 # Gắn router
 app.include_router(user.router)
 ```
+
+# ✅ Bài tập
+### Bài 1: Viết thêm các hàm CRUD:
+- `get_all_users`
+- `update_user`
+- `delete_user`
+### Bài 2: Thêm bảng Post:
+- `Post`: id, title, content, owner_id (ForeignKey đến `User`)
+- Quan hệ one-to-many (1 User có nhiều Post)
+- Tạo API tạo post và lấy post theo `user_id`
